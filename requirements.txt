@@ -1,0 +1,30 @@
+# AgroDetect Pipeline — Python Dependencies
+# Tested on Python 3.10+, CUDA 12.x, RTX 5080
+
+# ── Core ML ──────────────────────────────────────────────────────────────
+torch>=2.3.0
+torchvision>=0.18.0
+torchaudio>=2.3.0
+
+# ── Data / Scientific ─────────────────────────────────────────────────────
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+pillow>=10.3.0
+
+# ── Visualisation ────────────────────────────────────────────────────────
+matplotlib>=3.9.0
+seaborn>=0.13.0
+
+# ── Explainability ────────────────────────────────────────────────────────
+shap>=0.45.0
+
+# ── Memory profiling ─────────────────────────────────────────────────────
+psutil>=5.9.0
+
+# ── Progress bars ────────────────────────────────────────────────────────
+tqdm>=4.66.0
+
+# ── Optional: image hashing for cleaning ─────────────────────────────────
+imagehash>=4.3.1

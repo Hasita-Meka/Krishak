@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+conda/
+
+# Large model checkpoints
+outputs/models/*.pth
+
+# Dataset images - download from Kaggle
+Dataset/train_images/
+Dataset/test_images/
+Dataset/aug_images/
+Dataset/sample_submission.csv
+outputs/ 
