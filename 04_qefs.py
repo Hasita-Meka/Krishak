@@ -193,11 +193,13 @@ def extract_features(model: nn.Module, loader: DataLoader,
 
 
 def get_backbone_dim(model_name: str) -> int:
+    # MobileNetV3-Large: get_feature_extractor keeps classifier[0] (Linear 960→1280)
+    # + classifier[1] (Hardswish) in the forward pass, so the real output is 1280.
     _dims = {
         "convnext_base":      1024,
         "densenet161":        2208,
         "googlenet":          1024,
-        "mobilenet_v3_large": 960,
+        "mobilenet_v3_large": 1280,   # FIX: classifier[0] expands 960→1280 before Identity
         "resnet50":           2048,
         "shufflenet_v2":      1024,
     }
