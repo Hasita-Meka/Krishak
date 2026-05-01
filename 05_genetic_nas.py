@@ -206,7 +206,7 @@ _cnn_feat_dims = {
     "convnext_base":      1024,
     "densenet161":        2208,
     "googlenet":          1024,
-    "mobilenet_v3_large": 960,
+    "mobilenet_v3_large": 1280,   # FIX: classifier[0] expands 960→1280 before Identity
     "resnet50":           2048,
     "shufflenet_v2":      1024,
 }
